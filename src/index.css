@@ -1,0 +1,77 @@
+:root {
+  --dark-color: #181e1e;
+  --red-color: #e63946;
+  --pink-color: #ff6864;
+  --yellow-color: #ffca28;
+  --gray-dark-color: #312d2d;
+}
+
+*,
+*::before,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+/* section */
+section {
+  padding: 80px;
+  color: #fff;
+}
+section div h2 {
+  font-weight: 900;
+  font-size: 40px;
+}
+section div {
+  position: relative;
+}
+section div h2::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: var(--red-color);
+  top: 50px;
+  left: 0;
+}
+section h2.light::after {
+  background-color: var(--yellow-color);
+}
+section .content-container {
+  display: flex;
+}
+@media (max-width: 1040px) {
+  .wrapper {
+    max-width: 694px;
+  }
+}
+@media (max-width: 720px) {
+  section,
+  .wrapper {
+    padding: 0 32px;
+  }
+  section div h2 {
+    font-size: 24px;
+    margin-top: 0;
+    padding: 10px 0;
+  }
+  section div h2::after {
+    width: 50px;
+    bottom: 0;
+    left: 32px;
+  }
+}
